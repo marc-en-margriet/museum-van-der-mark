@@ -150,7 +150,7 @@ watch(() => route.params.id, () => {
   justify-content: center;
   width: 100vw;
   height: 100dvh;
-  padding: 2rem;
+  padding: 1rem;
   cursor: pointer;
   perspective: 1200px;
 }
@@ -172,18 +172,23 @@ watch(() => route.params.id, () => {
   inset: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border: 1px solid #d6d0c8;
   border-radius: 4px;
-  background: #faf9f7;
   display: flex;
   flex-direction: column;
   padding: 2.5rem 2rem;
   overflow: hidden;
 }
 
+.card-front {
+  background: #3E4A3A;
+  border: 1px solid #3E4A3A;
+}
+
 .card-back {
   transform: rotateY(180deg);
   cursor: default;
+  background: #D1C6AC;
+  border: 1px solid #D1C6AC;
 }
 
 /* Front */
@@ -191,7 +196,7 @@ watch(() => route.params.id, () => {
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #999;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .card-main {
@@ -208,7 +213,7 @@ watch(() => route.params.id, () => {
   font-size: 1.75rem;
   font-weight: normal;
   line-height: 1.35;
-  color: #1a1a1a;
+  color: #ffffff;
   overflow-wrap: break-word;
   hyphens: auto;
   text-wrap: pretty;
@@ -217,7 +222,7 @@ watch(() => route.params.id, () => {
 .name {
   font-size: 0.95rem;
   font-style: italic;
-  color: #777;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .play-btn {
@@ -226,8 +231,8 @@ watch(() => route.params.id, () => {
   height: 3rem;
   border-radius: 50%;
   border: none;
-  background: #1a1a1a;
-  color: #faf9f7;
+  background: #ffffff;
+  color: #3E4A3A;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -236,7 +241,7 @@ watch(() => route.params.id, () => {
 }
 
 .play-btn:hover {
-  background: #333;
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .back-btn {
@@ -245,8 +250,8 @@ watch(() => route.params.id, () => {
   height: 3rem;
   border-radius: 50%;
   border: none;
-  background: #1a1a1a;
-  color: #faf9f7;
+  background: #3A3A38;
+  color: #D1C6AC;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -256,7 +261,7 @@ watch(() => route.params.id, () => {
 }
 
 .back-btn:hover {
-  background: #333;
+  background: #4a4a48;
 }
 
 /* Back */
@@ -265,7 +270,7 @@ watch(() => route.params.id, () => {
   align-items: center;
   gap: 0.75rem;
   padding: 0.85rem 1rem;
-  background: #f0ede8;
+  background: rgba(58, 58, 56, 0.1);
   border-radius: 4px;
   margin-bottom: 1.75rem;
   cursor: default;
@@ -277,8 +282,8 @@ watch(() => route.params.id, () => {
   height: 2rem;
   border-radius: 50%;
   border: none;
-  background: #1a1a1a;
-  color: #faf9f7;
+  background: #3A3A38;
+  color: #D1C6AC;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -287,20 +292,20 @@ watch(() => route.params.id, () => {
 }
 
 .play-btn-sm:hover {
-  background: #333;
+  background: #4a4a48;
 }
 
 .progress-bar {
   flex: 1;
   height: 4px;
-  background: #ccc;
+  background: rgba(58, 58, 56, 0.25);
   border-radius: 2px;
   cursor: pointer;
 }
 
 .progress-fill {
   height: 100%;
-  background: #1a1a1a;
+  background: #3A3A38;
   border-radius: 2px;
   transition: width 0.1s linear;
 }
@@ -308,14 +313,14 @@ watch(() => route.params.id, () => {
 .time {
   flex-shrink: 0;
   font-size: 0.75rem;
-  color: #666;
+  color: #3A3A38;
   font-variant-numeric: tabular-nums;
 }
 
 .description {
   font-size: 0.95rem;
   line-height: 1.85;
-  color: #333;
+  color: #3A3A38;
   overflow-y: auto;
   flex: 1;
   min-height: 0;
