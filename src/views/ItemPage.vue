@@ -4,6 +4,7 @@
       <p class="item-period">{{ item.period }}</p>
       <h1 class="item-translation">{{ item.translation }}</h1>
       <p class="item-name">{{ item.name }}</p>
+      <p class="item-description">{{ item.description }}</p>
     </div>
   </div>
 </template>
@@ -51,5 +52,12 @@ const item = computed(() => {
   font-size: 1rem;
   color: #555;
   font-style: italic;
+}
+
+.item-description {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
 }
 </style>
