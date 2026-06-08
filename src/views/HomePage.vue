@@ -34,7 +34,7 @@
     </section>
 
     <footer>
-      <p>&copy; 2026 Museum Van der Mark</p>
+      <p>&copy; 12-06-2026 Museum Van der Mark</p>
     </footer>
   </main>
 </template>
@@ -61,7 +61,7 @@ header {
 }
 
 .logo {
-  height: 120px;
+  height: 150px;
   width: auto;
 }
 
