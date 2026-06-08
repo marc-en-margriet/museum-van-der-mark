@@ -6,7 +6,13 @@ import { fileURLToPath } from 'url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
 
-const data = JSON.parse(readFileSync(resolve(root, 'src/data/data.json'), 'utf-8'))
+const raw = readFileSync(resolve(root, 'src/data/data.json'), 'utf-8').trim()
+const data = raw ? JSON.parse(raw) : []
+
+if (!data.length) {
+  console.log('Geen items gevonden in src/data/data.json')
+  process.exit(0)
+}
 const outDir = resolve(root, 'public/qr')
 
 mkdirSync(outDir, { recursive: true })
