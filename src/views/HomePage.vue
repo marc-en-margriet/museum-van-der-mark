@@ -153,7 +153,7 @@ footer {
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.5rem;
   transition: opacity 0.2s;
 }
 
