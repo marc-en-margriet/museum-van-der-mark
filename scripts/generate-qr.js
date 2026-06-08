@@ -17,7 +17,7 @@ const outDir = resolve(root, 'public/qr')
 
 mkdirSync(outDir, { recursive: true })
 
-const BASE_URL = 'https://bobmulder.github.io/museum-van-der-mark/x'
+const BASE_URL = 'https://marc-en-margriet.github.io/museum-van-der-mark/x'
 
 for (const item of data) {
   const url = `${BASE_URL}/${item.id}`
