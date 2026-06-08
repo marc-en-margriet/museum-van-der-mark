@@ -32,8 +32,10 @@
               <path d="M8 5v14l11-7z"/>
             </svg>
           </button>
-          <div class="progress-bar" @click="seek">
-            <div class="progress-fill" :style="{ width: progress + '%' }" />
+          <div class="progress-bar" ref="progressBar"
+               @mousedown="startDrag" @touchstart.prevent="startDrag">
+            <div class="progress-fill"
+                 :style="{ width: progress + '%', transition: isDragging ? 'none' : 'width 0.1s linear' }" />
           </div>
           <span class="time">{{ formatTime(currentTime) }} / {{ formatTime(duration) }}</span>
         </div>
@@ -73,9 +75,11 @@ onMounted(() => { if (item.value) markVisited(item.value.id) })
 
 const flipped = ref(false)
 const audioEl = ref(null)
+const progressBar = ref(null)
 const playing = ref(false)
 const currentTime = ref(0)
 const duration = ref(0)
+const isDragging = ref(false)
 const progress = computed(() => duration.value ? (currentTime.value / duration.value) * 100 : 0)
 
 function flip() {
@@ -113,10 +117,35 @@ function togglePlay() {
   }
 }
 
-function seek(e) {
-  if (!audioEl.value) return
-  const rect = e.currentTarget.getBoundingClientRect()
-  audioEl.value.currentTime = ((e.clientX - rect.left) / rect.width) * duration.value
+function applySeek(clientX) {
+  if (!audioEl.value || !progressBar.value) return
+  const rect = progressBar.value.getBoundingClientRect()
+  const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width))
+  audioEl.value.currentTime = ratio * duration.value
+}
+
+function startDrag(e) {
+  isDragging.value = true
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX
+  applySeek(clientX)
+  document.addEventListener('mousemove', onDragMove)
+  document.addEventListener('mouseup', stopDrag)
+  document.addEventListener('touchmove', onDragMove, { passive: false })
+  document.addEventListener('touchend', stopDrag)
+}
+
+function onDragMove(e) {
+  e.preventDefault()
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX
+  applySeek(clientX)
+}
+
+function stopDrag() {
+  isDragging.value = false
+  document.removeEventListener('mousemove', onDragMove)
+  document.removeEventListener('mouseup', stopDrag)
+  document.removeEventListener('touchmove', onDragMove)
+  document.removeEventListener('touchend', stopDrag)
 }
 
 function formatTime(s) {
@@ -140,6 +169,7 @@ let playTimeout = null
 onUnmounted(() => {
   cancelAnimationFrame(rafId)
   clearTimeout(playTimeout)
+  stopDrag()
 })
 
 watch(() => route.params.id, () => {
@@ -333,13 +363,14 @@ watch(() => route.params.id, () => {
   background: rgba(58, 58, 56, 0.25);
   border-radius: 2px;
   cursor: pointer;
+  user-select: none;
+  touch-action: none;
 }
 
 .progress-fill {
   height: 100%;
   background: #3A3A38;
   border-radius: 2px;
-  transition: width 0.1s linear;
 }
 
 .time {
