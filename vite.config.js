@@ -3,5 +3,5 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/museum-van-der-mark/',
+  base: process.env.NODE_ENV === 'production' ? '/museum-van-der-mark/' : '/',
 })
