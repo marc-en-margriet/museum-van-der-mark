@@ -21,7 +21,7 @@
       </div>
 
       <div class="card-face card-back">
-        <audio ref="audioEl" :src="`/audio/${item.id}.mp3`" @canplay="onCanPlay" @ended="onEnded" />
+        <audio ref="audioEl" :src="`${base}audio/${item.id}.mp3`" @canplay="onCanPlay" @ended="onEnded" />
 
         <div class="player" @click.stop>
           <button class="play-btn-sm" @click="togglePlay" :aria-label="playing ? 'Pauzeren' : 'Afspelen'">
@@ -56,6 +56,8 @@ import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import data from '../data/data.json'
 import { useVisitedItems } from '../composables/useVisitedItems'
+
+const base = import.meta.env.BASE_URL
 
 const route = useRoute()
 const router = useRouter()
