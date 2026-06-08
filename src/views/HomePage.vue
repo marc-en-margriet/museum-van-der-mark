@@ -4,6 +4,10 @@
       <img src="/logo.png" alt="Museum Van der Mark" class="logo" />
     </header>
 
+    <section class="empty" v-if="visitedCount === 0">
+      <p>Welkom in het Museum Van der Mark. Een antropologische studie naar de leefwijze van Homo sapiens. Samengesteld door M&amp;M Erfgoedonderzoek</p>
+    </section>
+
     <section class="visited" v-if="visitedCount > 0">
       <div class="progress-block">
         <p class="progress-label">{{ visitedCount }} van {{ totalCount }} items ontdekt</p>
@@ -54,6 +58,16 @@ footer {
   font-size: 0.8rem;
   opacity: 0.4;
   text-align: center;
+}
+
+.empty {
+  padding: 4rem 3rem;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  opacity: 0.6;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
 .visited {
