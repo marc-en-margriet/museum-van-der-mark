@@ -1,28 +1,25 @@
 <template>
   <main>
     <header>
-      <nav>
-        <span class="logo">Museum Van der Mark</span>
-        <ul>
-          <li><a href="#">Collectie</a></li>
-          <li><a href="#">Tentoonstellingen</a></li>
-          <li><a href="#">Bezoek</a></li>
-        </ul>
-      </nav>
+      <img src="/logo.png" alt="Museum Van der Mark" class="logo" />
     </header>
 
-    <section class="hero">
-      <h1>Museum Van der Mark</h1>
-      <p>Een collectie om bij stil te staan</p>
-      <a href="#" class="btn">Ontdek de collectie</a>
-    </section>
+    <section class="visited" v-if="visitedCount > 0">
+      <div class="progress-block">
+        <p class="progress-label">{{ visitedCount }} van {{ totalCount }} items ontdekt</p>
+        <div class="progress-track">
+          <div class="progress-fill" :style="{ width: (visitedCount / totalCount * 100) + '%' }"/>
+        </div>
+      </div>
 
-    <section class="intro">
-      <p>
-        Museum Van der Mark is een plek waar kunst en stilte samenkomen.
-        Wij bewaren en tonen werken die vragen oproepen, ruimte geven aan
-        contemplatie en de verbeelding voeden.
-      </p>
+      <div class="card-list">
+        <RouterLink v-for="item in visitedItems" :key="item.id"
+                    :to="`/x/${item.id}`" class="mini-card">
+          <p class="mini-period">{{ item.period }}</p>
+          <p class="mini-translation">{{ item.translation }}</p>
+          <p class="mini-name">{{ item.name }}</p>
+        </RouterLink>
+      </div>
     </section>
 
     <footer>
@@ -31,87 +28,24 @@
   </main>
 </template>
 
+<script setup>
+import { RouterLink } from 'vue-router'
+import { useVisitedItems } from '../composables/useVisitedItems'
+
+const { visitedItems, visitedCount, totalCount } = useVisitedItems()
+</script>
+
 <style scoped>
 header {
   padding: 1.5rem 3rem;
   border-bottom: 1px solid #e0ddd8;
-}
-
-nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .logo {
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 0.875rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  opacity: 0.6;
-  transition: opacity 0.2s;
-}
-
-nav a:hover {
-  opacity: 1;
-}
-
-.hero {
-  padding: 8rem 3rem;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: clamp(2rem, 6vw, 5rem);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.125rem;
-  opacity: 0.6;
-  margin-bottom: 2.5rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 2rem;
-  border: 1px solid #1a1a1a;
-  text-decoration: none;
-  color: inherit;
-  font-size: 0.875rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.btn:hover {
-  background-color: #1a1a1a;
-  color: #faf9f7;
-}
-
-.intro {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 4rem 3rem;
-  text-align: center;
-  font-size: 1.125rem;
-  opacity: 0.75;
-  border-top: 1px solid #e0ddd8;
+  height: 80px;
+  width: auto;
 }
 
 footer {
@@ -120,5 +54,78 @@ footer {
   font-size: 0.8rem;
   opacity: 0.4;
   text-align: center;
+}
+
+.visited {
+  padding: 1.5rem 2rem 1rem;
+}
+
+.progress-block {
+  margin-bottom: 2rem;
+}
+
+.progress-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 0.6rem;
+}
+
+.progress-track {
+  height: 3px;
+  background: #D1C6AC;
+  border-radius: 2px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #3E4A3A;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mini-card {
+  padding: 1.25rem;
+  background: #3E4A3A;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.mini-card:hover {
+  opacity: 0.85;
+}
+
+.mini-period {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mini-translation {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #ffffff;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.mini-name {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: auto;
 }
 </style>

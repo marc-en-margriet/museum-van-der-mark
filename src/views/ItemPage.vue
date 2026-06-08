@@ -3,6 +3,11 @@
     <div class="card" :class="{ flipped }">
 
       <div class="card-face card-front">
+        <RouterLink to="/" class="home-btn" @click.stop aria-label="Terug naar overzicht">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+          </svg>
+        </RouterLink>
         <p class="period">{{ item.period }}</p>
         <div class="card-main">
           <h1 class="translation" lang="nl">{{ item.translation }}</h1>
@@ -47,9 +52,10 @@
 </template>
 
 <script setup>
-import { computed, ref, watch, onUnmounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
+import { useRoute, useRouter, RouterLink } from 'vue-router'
 import data from '../data/data.json'
+import { useVisitedItems } from '../composables/useVisitedItems'
 
 const route = useRoute()
 const router = useRouter()
@@ -59,6 +65,9 @@ const item = computed(() => {
   if (!found) router.replace('/404')
   return found
 })
+
+const { markVisited } = useVisitedItems()
+onMounted(() => { if (item.value) markVisited(item.value.id) })
 
 const flipped = ref(false)
 const audioEl = ref(null)
@@ -140,6 +149,7 @@ watch(() => route.params.id, () => {
     audioEl.value.pause()
     audioEl.value.currentTime = 0
   }
+  if (item.value) markVisited(item.value.id)
 })
 </script>
 
@@ -223,6 +233,26 @@ watch(() => route.params.id, () => {
   font-size: 0.95rem;
   font-style: italic;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.home-btn {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: 0.5rem;
+}
+
+.home-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
 }
 
 .play-btn {
