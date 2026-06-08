@@ -22,5 +22,10 @@ export function useVisitedItems() {
   const visitedCount = computed(() => visitedIds.value.length)
   const totalCount = data.length
 
-  return { visitedItems, visitedCount, totalCount, markVisited }
+  function resetProgress() {
+    visitedIds.value = []
+    localStorage.removeItem(STORAGE_KEY)
+  }
+
+  return { visitedItems, visitedCount, totalCount, markVisited, resetProgress }
 }
