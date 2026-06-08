@@ -8,7 +8,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
           </svg>
         </RouterLink>
-        <p class="period">{{ item.period }}</p>
+        <p class="period">Periode: {{ item.period }}</p>
         <div class="card-main">
           <h1 class="translation" lang="nl">{{ item.translation }}</h1>
           <p class="name">{{ item.name }}</p>

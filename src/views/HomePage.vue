@@ -26,7 +26,7 @@
       <div class="card-list">
         <RouterLink v-for="item in visitedItems" :key="item.id"
                     :to="`/x/${item.id}`" class="mini-card">
-          <p class="mini-period">{{ item.period }}</p>
+          <p class="mini-period">Periode: {{ item.period }}</p>
           <p class="mini-translation">{{ item.translation }}</p>
           <p class="mini-name">{{ item.name }}</p>
         </RouterLink>
