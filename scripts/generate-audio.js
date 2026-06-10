@@ -25,7 +25,7 @@ if (!data.length) {
 const outDir = resolve(root, 'public/audio')
 mkdirSync(outDir, { recursive: true })
 
-const TIMEOUT_MS = 60_000
+const TIMEOUT_MS = 90_000
 let succeeded = 0
 let failed = 0
 
