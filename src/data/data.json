@@ -193,6 +193,27 @@
     "name": "Kraan met heetwatersysteem",
     "translation": "Monument van Optimistische Verwachtingen",
     "period": "Renovatieperiode",
-    "description": "Op het eerste gezicht lijkt dit object op een geavanceerd heetwatersysteem. Nader onderzoek leert echter dat bezoekers nog steeds moeten wachten. Historici beschouwen het als een monument voor de menselijke hoop dat iets sneller werkt dan het daadwerkelijk doet. De ervaring wordt vaak omschreven als “bijna een Quooker”."
+    "description": "Op het eerste gezicht lijkt dit object op een geavanceerd heetwatersysteem. Nader onderzoek leert echter dat bezoekers nog steeds moeten wachten. Historici beschouwen het als een monument voor de menselijke hoop dat iets sneller werkt dan het daadwerkelijk doet. De ervaring wordt vaak omschreven als 'bijna een Quooker'."
+  },
+  {
+    "id": "67dd5b58-ff62-4bc2-8e8e-21cf22e1ceae",
+    "name": "Glasvezelaansluiting",
+    "translation": "De Poort naar de Digitale Wereld",
+    "period": "Informatietijdperk",
+    "description": "Deze bescheiden installatie vormde jarenlang de primaire verbinding tussen de bewoners en de rest van de wereld. Via dit object werden duizenden berichten verstuurd, honderden series bekeken en talloze online aankopen gedaan die 'echt nodig waren'. Ondanks zijn cruciale rol werd het object zelden bezocht en door veel gebruikers niet volledig begrepen. Historische bronnen suggereren dat men bij storingen regelmatig hoopvol naar deze installatie keek zonder precies te weten waarom."
+  },
+  {
+    "id": "a33469c8-7b53-49bd-b5d9-cee5277f70b6",
+    "name": "Zolderberging",
+    "translation": "De Verboden Archieven",
+    "period": "Onbekend",
+    "description": "Verborgen boven de reeds bestaande opslagruimte bevindt zich deze uitzonderlijk zeldzame secundaire opslaglocatie. Oorspronkelijk bedoeld voor incidenteel gebruik, ontwikkelde de ruimte zich tot een reservaat voor objecten die zelfs voor de normale zolder te zolderachtig waren. Onderzoekers troffen hier voorwerpen aan waarvan de laatste bevestigde waarneming meerdere jaren geleden plaatsvond. De kans dat een object deze ruimte verlaat wordt door experts als bijzonder klein ingeschat."
+  },
+  {
+    "id": "c8cb4570-9f3c-4e33-9a06-22330ea910d9",
+    "name": "Niets",
+    "translation": "Ongetiteld (Leegte), ca. 2026",
+    "period": "Hedendaagse Conceptuele Kunst",
+    "description": "Dit werk onderzoekt de spanning tussen aanwezigheid en afwezigheid. Bezoekers die zich afvragen waarom er een museumkaartje hangt zonder object, ervaren exact wat de kunstenaar beoogde. Verzekerde waarde: € 2.800.000"
   }
 ]
