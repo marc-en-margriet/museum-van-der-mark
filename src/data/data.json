@@ -1,5 +1,201 @@
 [
   {
+    "id": "be855d47-0abb-4f50-94c0-00586bb06f34",
+    "name": "Stoel",
+    "translation": "Tijdelijke Textielopslagplaats nr. 4",
+    "period": "Vroege Samenwooncultuur",
+    "description": "Hoewel archeologen aanvankelijk dachten dat dit object bedoeld was om op te zitten, tonen recente onderzoeken aan dat de primaire functie vermoedelijk bestond uit het verzamelen van kleding die “nog niet vies genoeg was voor de was, maar ook niet schoon genoeg voor de kast”. De huidige reconstructie toont de stoel in zijn natuurlijke habitat."
+  },
+  {
+    "id": "4e64ad17-da17-4948-ada6-342f0e145603",
+    "name": "Koelkast",
+    "translation": "Het Poolarchief van Hoopvolle Aankopen",
+    "period": "Moderne Consumptiecultuur",
+    "description": "Deze gekoelde opslagruimte bevatte een wisselende collectie levensmiddelen, restjes en ambitieuze gezonde aankopen. Bij opgravingen werden meerdere verpakkingen aangetroffen waarvan de houdbaarheidsdatum inmiddels een archeologisch tijdperk vertegenwoordigt. Een bijzondere vondst betreft een halve appel waarvan de oorspronkelijke functie niet meer te achterhalen was. Wetenschappers discussiëren nog steeds over de vraag of deze ooit daadwerkelijk is gebruikt."
+  },
+  {
+    "id": "fc0f1f12-e11d-4522-aefe-30fa0f5f3363",
+    "name": "Tandenborstel",
+    "translation": "Persoonlijk Reinigingsinstrument van de Late Ochtenddynastie",
+    "period": "Dagelijkse Rituele Cultuur",
+    "description": "Dit exemplaar behoort tot een familie van instrumenten die traditioneel werden gebruikt voorafgaand aan sociale interacties. Sporenonderzoek toont aan dat gebruikers consequent werden geconfronteerd met aanbevelingen om het object elke drie maanden te vervangen. Zoals bij veel oude beschavingen werden deze adviezen beleefd aangehoord en vervolgens genegeerd."
+  },
+  {
+    "id": "ace628a8-2d45-46a5-997e-6a1f1598f960",
+    "name": "Bank",
+    "translation": "Het Grote Horizontale Vergaderplatform",
+    "period": "Samenlevingsperiode I",
+    "description": "De bank vormde eeuwenlang het bestuurlijke centrum van de woning. Hier werden belangrijke besluiten genomen, waaronder: “Wat eten we vanavond?”, “Heb jij de sleutels gezien?” en “Zullen we nog één aflevering kijken?”. Documentatie suggereert dat deze laatste vraag zelden leidde tot precies één aflevering."
+  },
+  {
+    "id": "4d658618-9bae-4834-8796-65fcc281c51c",
+    "name": "Bed",
+    "translation": "Regeneratiekamer Alpha",
+    "period": "Hedendaagse Herstelcultuur",
+    "description": "Dit monumentale object speelde een cruciale rol binnen het slaapritueel van de bewoners. Volgens overgeleverde bronnen werden op deze locatie regelmatig ambitieuze plannen gemaakt voor de volgende ochtend. Vrijwel geen van deze plannen werd daadwerkelijk uitgevoerd. Bijzonder waardevol zijn de overblijfselen van meerdere wekker-alarmen die hier vermoedelijk hun einde vonden."
+  },
+  {
+    "id": "e8f29b14-9210-4e8c-8b37-c358187c5e86",
+    "name": "Smartphone",
+    "translation": "Het Orakel van de Moderne Tijd",
+    "period": "Digitale Beschaving",
+    "description": "Dit draagbare communicatiemiddel gaf toegang tot vrijwel alle kennis van de mensheid. Historische gegevens suggereren echter dat het voornamelijk werd ingezet voor: filmpjes van honden, filmpjes van katten, en filmpjes van mensen die doen alsof zij honden of katten zijn. De bewoners raadpleegden het object gemiddeld 200 keer per dag om vast te stellen of er iets nieuws was gebeurd sinds de vorige raadpleging, ongeveer drie minuten eerder."
+  },
+  {
+    "id": "70efda15-051c-49d3-85c1-84dc6380d74f",
+    "name": "Wasmand",
+    "translation": "Het Tijdelijk Textielarchief",
+    "period": "Huishoudelijke Migratiecultuur",
+    "description": "Deze installatie vormde een tussenstation voor kledingstukken op hun reis van vloer naar wasmachine. Hoewel ontworpen voor tijdelijke opslag, suggereren sommige bronnen dat bepaalde bewoners de locatie gebruikten voor langdurige bewaring. Enkele textielstukken zouden hier meerdere seizoenen hebben doorgebracht."
+  },
+  {
+    "id": "d3f930d0-0947-460f-ac8f-e7f20734eb1c",
+    "name": "Kamerplant",
+    "translation": "Experiment 17: Verantwoordelijkheid",
+    "period": "Lopend Onderzoek",
+    "description": "Deze levende installatie werd oorspronkelijk aangeschaft met groot enthousiasme. Historische bronnen tonen een terugkerend patroon: overmatig water geven, vergeten water te geven, paniek, en nieuwe plant aanschaffen. Het is onbekend hoeveel generaties voorgangers deze tentoonstelling voorafgingen."
+  },
+  {
+    "id": "75ed337e-c159-4eaa-b2f9-ad957f145633",
+    "name": "Spiegel",
+    "translation": "Confrontatie met het Zelf",
+    "period": "Onbekend",
+    "description": "Deze interactieve installatie biedt bezoekers een unieke ervaring waarbij zij onverwacht onderdeel worden van de tentoonstelling. Gebruikers rapporteren wisselende resultaten, afhankelijk van het tijdstip van de dag. De ervaring blijkt het meest uitdagend op maandagochtenden."
+  },
+  {
+    "id": "6d72cf9f-ecd6-4635-b13c-b32aa1aa88e8",
+    "name": "WC",
+    "translation": "De Kamer van Grote Besluiten",
+    "period": "Permanent gebruik",
+    "description": "Ondanks zijn bescheiden uiterlijk speelde deze ruimte een belangrijke rol binnen de intellectuele geschiedenis van het huishouden. Verslagen tonen aan dat hier: vakanties werden gepland, discussies werden gewonnen, online aankopen werden gedaan, en complete toekomstvisies werden ontwikkeld. Geen van deze activiteiten hield direct verband met het oorspronkelijke doel van de ruimte."
+  },
+  {
+    "id": "98ae4cfa-d6ab-41d8-af06-765b3943f542",
+    "name": "Kapstok",
+    "translation": "De Ontvangstpoort der Buitenwereld",
+    "period": "Late Samenwooncultuur",
+    "description": "Deze installatie markeerde de overgang tussen de buitenwereld en het huishouden. Oorspronkelijk ontworpen voor het ophangen van jassen, ontwikkelde het object zich al snel tot een tijdelijke opslagplaats voor alles wat “straks wel wordt opgeruimd”. Historische bronnen tonen aan dat bewoners regelmatig hun sleutels verloren terwijl deze zich minder dan een meter van dit object bevonden. De tentoonstelling wordt beschouwd als een belangrijk voorbeeld van gecontroleerde chaos."
+  },
+  {
+    "id": "35988a11-385d-44c6-8ff7-5a6540f04e25",
+    "name": "Trapkast",
+    "translation": "Het Verborgen Archief",
+    "period": "Onbekend",
+    "description": "Van alle ruimtes in de woning is dit de minst onderzochte. Generaties bewoners gebruikten deze locatie voor objecten die te belangrijk leken om weg te gooien, maar niet belangrijk genoeg waren voor een vaste plek. Onderzoekers troffen onder andere kerstspullen, boodschappentassen en opladers van uitgestorven apparaten aan. Niemand weet precies wat zich achterin bevindt."
+  },
+  {
+    "id": "b44e9941-965f-4827-8600-a8ef885b6c9e",
+    "name": "Vaatwasser",
+    "translation": "De Grote Reinigingsmachine",
+    "period": "Moderne Beschaving",
+    "description": "Deze installatie speelde een centrale rol binnen het huishouden. Hoewel ontworpen voor het reinigen van servies, werd zij vooral bekend als bron van discussie over de juiste manier van inruimen. Historische documenten bevatten opvallend veel variaties op de uitspraak: “Zo hoort dat toch niet?” De wetenschappelijke gemeenschap heeft nog geen definitief antwoord gevonden."
+  },
+  {
+    "id": "f0ca98fb-df59-4587-945a-b6793c869cc1",
+    "name": "Wasmachine",
+    "translation": "De Textielwedergeboortemachine",
+    "period": "Industriële Huishoudcultuur",
+    "description": "Dit apparaat stelde bewoners, in huishouden Van Der Mark voornamelijk de man, in staat kleding terug te brengen naar een maatschappelijk aanvaardbare staat. Archeologische sporen tonen aan dat regelmatig papieren zakdoekjes, kassabonnen en muntgeld werden meegewassen. Ondanks deze terugkerende gebeurtenissen bleven gebruikers ervan overtuigd dat zij hun zakken voortaan echt zouden controleren."
+  },
+  {
+    "id": "23ea0603-e716-4687-9447-ca7b7717079f",
+    "name": "Droger",
+    "translation": "De Kamer der Verdwenen Sokken",
+    "period": "Moderne Tijd",
+    "description": "Companion-stuk van de Textielwedergeboortemachine. Hoewel het apparaat ontworpen werd om kleding te drogen, staat het vooral bekend om het verdwijnen van losse sokken. Wetenschappers onderzoeken dit fenomeen al jaren zonder sluitende verklaring. De meest geaccepteerde theorie blijft “geen idee”."
+  },
+  {
+    "id": "3ddadd0d-92d9-4f58-961b-e511001be7a4",
+    "name": "TV",
+    "translation": "Het Elektronisch Kampvuur",
+    "period": "Digitale Tijdperk",
+    "description": "Rond dit object verzamelde het huishouden zich voor ontspanning, sport en eindeloze streamingdiensten. Historische bronnen suggereren dat bewoners gemiddeld langer deden over het kiezen van een programma dan over het kijken ervan. De vraag “Wat zullen we kijken?” wordt beschouwd als een van de grote onopgeloste vraagstukken van deze beschaving."
+  },
+  {
+    "id": "8bfa34b4-3fa8-451f-95ed-89ee9777aff0",
+    "name": "TV-kast",
+    "translation": "Altaar van de Bekabeling",
+    "period": "Digitale Oudheid",
+    "description": "Dit meubel ondersteunt het Elektronisch Kampvuur en herbergt een complex netwerk van kabels. Onderzoekers vermoeden dat niemand volledig begrijpt welke kabel waarvoor dient. Pogingen tot reorganisatie worden als risicovolle operaties beschouwd en vinden daarom zelden plaats."
+  },
+  {
+    "id": "cbe4880b-0725-4f4a-bbc2-5c532b2389cb",
+    "name": "Kussen",
+    "translation": "Universeel Comfortobject",
+    "period": "Hedendaagse Cultuur",
+    "description": "Dit veelzijdige object werd gebruikt als hoofdsteun, armsteun en incidenteel projectiel. Tijdens filmavonden veranderde de positie ervan voortdurend. Ondanks de aanwezigheid van meerdere exemplaren bleek altijd precies dat ene kussen het populairst."
+  },
+  {
+    "id": "067ff762-90b7-40c4-b228-451774b3541a",
+    "name": "Spelletjeskast",
+    "translation": "Archief van Competitieve Relaties",
+    "period": "Moderne Gezelschapscultuur",
+    "description": "Deze collectie documenteert jaren van samenwerking, rivaliteit en discussie. Bij vrijwel ieder spel werden uitspraken geregistreerd als: “Dat staat niet in de regels” en “Zo spelen wij dat altijd.” De precieze waarheid is nooit vastgesteld."
+  },
+  {
+    "id": "dc587271-7618-4228-acc9-4cd53ee9f3ce",
+    "name": "Kledingkast",
+    "translation": "Nationaal Textielarchief",
+    "period": "Doorlopend",
+    "description": "Deze collectie bevat kledingstukken uit verschillende tijdperken van de bewoners. Een aanzienlijk deel wordt bewaard voor hypothetische scenario's zoals “misschien heb ik dit ooit nog nodig”. Tot op heden zijn deze scenario's zelden waargenomen."
+  },
+  {
+    "id": "791439af-29d8-4c81-8798-54a8eed69704",
+    "name": "Dartbord",
+    "translation": "Instrument voor Sociale Hiërarchiebepaling",
+    "period": "Moderne Competitiecultuur",
+    "description": "Dit object werd gebruikt om vaardigheden, geluk en opscheprechten vast te stellen. Opmerkelijk genoeg begon vrijwel iedere deelnemer met de verklaring: “Ik ben hier eigenlijk helemaal niet goed in.” Historische gegevens tonen aan dat deze uitspraak vaak voorafging aan een onverwacht goede beurt."
+  },
+  {
+    "id": "35059d6b-730c-481e-a820-41a9e53ae852",
+    "name": "Douchekop",
+    "translation": "De Regenmaker",
+    "period": "Dagelijkse Reinigingscultuur",
+    "description": "Dit apparaat voorzag bewoners van gecontroleerde neerslag. Door de jaren heen werd veel geëxperimenteerd met verschillende standen en instellingen. Volledige tevredenheid werd echter nooit bereikt."
+  },
+  {
+    "id": "8a27ce8f-8768-4b10-8c5f-375e1bea3aee",
+    "name": "Doucheruimte",
+    "translation": "Hydrologische Reflectiekamer",
+    "period": "Moderne Wellnesscultuur",
+    "description": "Binnen deze ruimte vonden dagelijkse reinigingsrituelen plaats. Historische verslagen suggereren dat hier ook veel belangrijke levensinzichten ontstonden. Vrijwel geen daarvan overleefde de wandeling naar de handdoek."
+  },
+  {
+    "id": "ab7aebd2-5464-4e2e-ab33-b623753c175f",
+    "name": "WC-rol",
+    "translation": "De Laatste Verdedigingslinie",
+    "period": "Permanente Tentoonstelling",
+    "description": "Een van de meest onderschatte objecten binnen de moderne beschaving. Hoewel het belang ervan algemeen erkend wordt, blijkt uit historisch onderzoek dat vervanging meestal pas plaatsvond nadat volledige uitputting was bereikt. Deze strategie leidde regelmatig tot noodsituaties."
+  },
+  {
+    "id": "0b106f8e-df9e-4bbf-8977-dd4a83a12d22",
+    "name": "Nachtkastje (vrouw)",
+    "translation": "Persoonlijk Commandocentrum – Oostvleugel",
+    "period": "Huidige Dynastie",
+    "description": "Deze collectie bevat zorgvuldig geselecteerde objecten die essentieel werden geacht voor de nachtelijke uren. De inhoud lijkt georganiseerd volgens een systeem dat uitsluitend door de eigenaar volledig wordt begrepen. Onderzoekers spreken van een opmerkelijk efficiënt ecosysteem."
+  },
+  {
+    "id": "7734d73c-b6fd-4b39-971d-a8d3cd7e61eb",
+    "name": "Nachtkastje (man)",
+    "translation": "Persoonlijk Commandocentrum – Westvleugel",
+    "period": "Huidige Dynastie",
+    "description": "Deze verzameling ontwikkelde zich geleidelijk door de jaren heen. Archeologen onderscheiden verschillende lagen van kabels, bonnetjes, muntgeld en objecten van onbekende oorsprong. De exacte functie van sommige vondsten blijft onderwerp van onderzoek."
+  },
+  {
+    "id": "13af3760-149a-46b0-85b6-3a9e42492302",
+    "name": "Dekbed",
+    "translation": "Mobiel Klimaatbeheersingssysteem",
+    "period": "Nachtcultuur",
+    "description": "Dit object vormde de primaire verdediging tegen kou en verantwoordelijkheden. Metingen tonen aan dat de aantrekkingskracht ervan sterk toeneemt naarmate het tijdstip van opstaan dichterbij komt. Vooral op maandagochtenden werden uitzonderlijke waarden geregistreerd."
+  },
+  {
+    "id": "ec1d4abd-0c00-4532-9706-e8e68aa1281a",
+    "name": "Kraan met heetwatersysteem",
+    "translation": "Monument van Optimistische Verwachtingen",
+    "period": "Renovatieperiode",
+    "description": "Op het eerste gezicht lijkt dit object op een geavanceerd heetwatersysteem. Nader onderzoek leert echter dat bezoekers nog steeds moeten wachten. Historici beschouwen het als een monument voor de menselijke hoop dat iets sneller werkt dan het daadwerkelijk doet. De ervaring wordt vaak omschreven als 'bijna een Quooker'."
+  },
+  {
     "id": "67dd5b58-ff62-4bc2-8e8e-21cf22e1ceae",
     "name": "Glasvezelaansluiting",
     "translation": "De Poort naar de Digitale Wereld",
