@@ -74,7 +74,6 @@ scripts/
 | `fc0f1f12-e11d-4522-aefe-30fa0f5f3363` | Tandenborstel |
 | `ace628a8-2d45-46a5-997e-6a1f1598f960` | Bank |
 | `4d658618-9bae-4834-8796-65fcc281c51c` | Bed |
-| `e8f29b14-9210-4e8c-8b37-c358187c5e86` | Smartphone |
 | `70efda15-051c-49d3-85c1-84dc6380d74f` | Wasmand |
 | `d3f930d0-0947-460f-ac8f-e7f20734eb1c` | Kamerplant |
 | `75ed337e-c159-4eaa-b2f9-ad957f145633` | Spiegel |
