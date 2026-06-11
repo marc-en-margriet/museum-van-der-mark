@@ -44,6 +44,7 @@ for (const item of data) {
         voice: 'cedar',
         input: item.description,
         language: 'nl',
+        speed: 1.1,
         response_format: 'mp3',
         instructions:
           'Affect: een mysterieuze noir detective. ' +
