@@ -40,11 +40,17 @@ for (const item of data) {
 
     const response = await Promise.race([
       client.audio.speech.create({
-        model: 'tts-1',
-        voice: 'alloy',
+        model: 'gpt-4o-mini-tts',
+        voice: 'cedar',
         input: item.description,
         language: 'nl',
         response_format: 'mp3',
+        instructions:
+          'Affect: een mysterieuze noir detective. ' +
+          'Toon: koel en afstandelijk, maar subtiel geruststellend — alsof je alles al hebt gezien en weet hoe je met elke zaak moet omgaan. ' +
+          'Uitvoering: langzaam en weloverwogen, met dramatische pauzes om spanning op te bouwen — alsof elk detail van belang is in dit onderzoek. ' +
+          'Emotie: een mix van wereldmoeheid en stille vastberadenheid, met een vleugje droge humor om het niet al te somber te maken. ' +
+          'Leestekens: korte, bondige zinnen met beletseltekens en gedachtestepen om ritme en spanning te creëren — als de innerlijke monoloog van een detective die de puzzelstukjes op zijn plek legt.',
       }),
       timeout,
     ])
