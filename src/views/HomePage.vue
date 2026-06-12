@@ -36,8 +36,8 @@
 
     <section class="photos">
       <div class="photo-stack">
-        <img src="/photos/photo1.jpeg" class="photo photo-left"  :style="photoStyle(0)" @click="openLightbox(0)" />
-        <img src="/photos/photo2.jpeg" class="photo photo-right" :style="photoStyle(1)" @click="openLightbox(1)" />
+        <img :src="photos[0]" class="photo photo-left"  :style="photoStyle(0)" @click="openLightbox(0)" />
+        <img :src="photos[1]" class="photo photo-right" :style="photoStyle(1)" @click="openLightbox(1)" />
       </div>
     </section>
 
@@ -50,7 +50,7 @@
     <Transition name="lightbox">
       <div v-if="lightboxIndex !== null" class="lightbox" @click="closeLightbox">
         <button class="lightbox-close" @click.stop="closeLightbox">&times;</button>
-        <img :src="lightboxIndex === 0 ? '/photos/photo1.jpeg' : '/photos/photo2.jpeg'" class="lightbox-img" />
+        <img :src="photos[lightboxIndex]" class="lightbox-img" />
       </div>
     </Transition>
   </Teleport>
@@ -73,6 +73,11 @@ function handleReset() {
 const tiltX = ref(0)
 const tiltY = ref(0)
 const lightboxIndex = ref(null)
+
+const photos = [
+  `${import.meta.env.BASE_URL}photos/photo1.jpeg`,
+  `${import.meta.env.BASE_URL}photos/photo2.jpeg`,
+]
 
 const BASE_ROTATIONS = [-6, 5]
 const TILT_FACTOR = [0.03, 0.025]
