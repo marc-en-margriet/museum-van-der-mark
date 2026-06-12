@@ -1,4 +1,5 @@
 <template>
+  <div>
   <main>
     <header>
       <img src="/logo.png" alt="Museum Van der Mark" class="logo" />
@@ -33,13 +34,31 @@
       </div>
     </section>
 
+    <section class="photos">
+      <div class="photo-stack">
+        <img src="/photos/photo1.jpeg" class="photo photo-left"  :style="photoStyle(0)" @click="openLightbox(0)" />
+        <img src="/photos/photo2.jpeg" class="photo photo-right" :style="photoStyle(1)" @click="openLightbox(1)" />
+      </div>
+    </section>
+
     <footer>
       <p>&copy; 12-06-2026 Museum Van der Mark</p>
     </footer>
   </main>
+
+  <Teleport to="body">
+    <Transition name="lightbox">
+      <div v-if="lightboxIndex !== null" class="lightbox" @click="closeLightbox">
+        <button class="lightbox-close" @click.stop="closeLightbox">&times;</button>
+        <img :src="lightboxIndex === 0 ? '/photos/photo1.jpeg' : '/photos/photo2.jpeg'" class="lightbox-img" />
+      </div>
+    </Transition>
+  </Teleport>
+  </div>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useVisitedItems } from '../composables/useVisitedItems'
 
@@ -50,6 +69,46 @@ function handleReset() {
     resetProgress()
   }
 }
+
+const tiltX = ref(0)
+const tiltY = ref(0)
+const lightboxIndex = ref(null)
+
+const BASE_ROTATIONS = [-6, 5]
+const TILT_FACTOR = [0.03, 0.025]
+
+function photoStyle(i) {
+  const rot = BASE_ROTATIONS[i] + tiltY.value * TILT_FACTOR[i]
+  const tx = tiltY.value * (i === 0 ? -1.5 : 1.5)
+  const ty = tiltX.value * 0.8
+  return {
+    transform: `rotate(${rot}deg) translate(${tx}px, ${ty}px)`,
+    transition: 'transform 0.1s linear',
+  }
+}
+
+function handleOrientation(e) {
+  tiltX.value = e.beta ?? 0
+  tiltY.value = e.gamma ?? 0
+}
+
+function openLightbox(i) { lightboxIndex.value = i }
+function closeLightbox() { lightboxIndex.value = null }
+
+onMounted(() => {
+  if (typeof DeviceOrientationEvent !== 'undefined' &&
+      typeof DeviceOrientationEvent.requestPermission === 'function') {
+    DeviceOrientationEvent.requestPermission().then(state => {
+      if (state === 'granted') window.addEventListener('deviceorientation', handleOrientation)
+    }).catch(() => {})
+  } else {
+    window.addEventListener('deviceorientation', handleOrientation)
+  }
+})
+
+onUnmounted(() => {
+  window.removeEventListener('deviceorientation', handleOrientation)
+})
 </script>
 
 <style scoped>
@@ -181,5 +240,88 @@ footer {
   font-style: italic;
   color: rgba(255, 255, 255, 0.6);
   margin-top: auto;
+}
+
+.photos {
+  padding: 3rem 2rem 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.photo-stack {
+  position: relative;
+  width: 280px;
+  height: 320px;
+}
+
+.photo {
+  position: absolute;
+  width: 200px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  will-change: transform;
+}
+
+.photo-left  { top: 20px; left: 0;    z-index: 1; }
+.photo-right { top: 40px; left: 80px; z-index: 2; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.lightbox-img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+  padding: 0.25rem 0.5rem;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+.lightbox-enter-active,
+.lightbox-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.lightbox-enter-active .lightbox-img,
+.lightbox-leave-active .lightbox-img {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.lightbox-enter-from,
+.lightbox-leave-to {
+  opacity: 0;
+}
+
+.lightbox-enter-from .lightbox-img,
+.lightbox-leave-to .lightbox-img {
+  transform: scale(0.9);
+  opacity: 0;
 }
 </style>
